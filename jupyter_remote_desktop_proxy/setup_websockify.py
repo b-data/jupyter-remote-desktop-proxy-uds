@@ -46,7 +46,7 @@ def setup_websockify():
             '-verbose',
             '-fg',
             '-geometry',
-            '1680x1050',
+            '1920x1044',
             '-SecurityTypes',
             'None',
         ]
