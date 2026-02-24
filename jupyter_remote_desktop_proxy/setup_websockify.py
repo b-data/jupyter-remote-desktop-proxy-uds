@@ -59,7 +59,11 @@ def setup_websockify():
         # We want the launcher entry to point to /desktop/, not to /desktop-websockify/
         # /desktop/ is the user facing URL, while /desktop-websockify/ now *only* serves
         # websockets.
-        "launcher_entry": {"title": "Desktop", "path_info": "desktop"},
+        "launcher_entry": {
+            "icon_path": "/usr/local/share/icons/hicolor/scalable/apps/qgis.svg",
+            "title": "QGIS Desktop",
+            "path_info": "desktop"
+        },
         "unix_socket": True,
         "raw_socket_proxy": True,
     }
