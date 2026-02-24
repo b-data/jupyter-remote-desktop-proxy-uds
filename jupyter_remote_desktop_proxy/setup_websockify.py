@@ -32,7 +32,7 @@ def setup_websockify():
     if is_turbovnc:
         # turbovnc doesn't handle being passed -rfbport -1, but turbovnc also
         # defaults to not opening a TCP port which is what we want to ensure
-        vnc_args = [vncserver, '-rfbunixpath', "{unix_socket}"]
+        vnc_args = [vncserver, '-noserverkeymap', '-rfbunixpath', "{unix_socket}"]
 
     xstartup = os.getenv("JUPYTER_REMOTE_DESKTOP_PROXY_XSTARTUP")
     if not xstartup and not os.path.exists(os.path.expanduser('~/.vnc/xstartup')):
